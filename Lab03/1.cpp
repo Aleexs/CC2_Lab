@@ -1,4 +1,3 @@
-//ESCARZA PACORI ALEXANDER RAUL
 #include <iostream>
 using namespace std;
 
