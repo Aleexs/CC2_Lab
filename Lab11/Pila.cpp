@@ -35,7 +35,7 @@ class Pila{
 			}
 		}
 		
-        void pop(){
+        	void pop(){
 			if (cabeza == NULL){
 				cout<<"Lista vacia"<<endl;
 			}
@@ -70,29 +70,29 @@ class Pila{
 			}
 		}
 
-        void buscar(){
-            Nodo *actual = new Nodo();
-            actual = cabeza;
-            int buscarV;
-            bool encontrar = false;
-            cout<<"Elemento a buscar: ";cin>>buscarV;
-            if(cabeza!=NULL){
-                while(actual!=NULL && buscarV != true){
-                    if(actual->dato == buscarV){
-                        cout<<"Elemento encontrado "<<buscarV;
-                        encontrar=true;
-                    }
-                    actual=actual->next;
-                }
-                if(encontrar ==false){
-                    cout<<"Elemento no encontrado ";
-                }
-            }
-            else{
-                cout<<"Pila vacia";
-            }
+		void buscar(){
+		    Nodo *actual = new Nodo();
+		    actual = cabeza;
+		    int buscarV;
+		    bool encontrar = false;
+		    cout<<"Elemento a buscar: ";cin>>buscarV;
+		    if(cabeza!=NULL){
+			while(actual!=NULL && buscarV != true){
+			    if(actual->dato == buscarV){
+				cout<<"Elemento encontrado "<<buscarV;
+				encontrar=true;
+			    }
+			    actual=actual->next;
+			}
+			if(encontrar ==false){
+			    cout<<"Elemento no encontrado ";
+			}
+		    }
+		    else{
+			cout<<"Pila vacia";
+		    }
 
-        }
+		}
 			
 };
 
@@ -100,33 +100,29 @@ class Pila{
 int main() {
 	
 	int opc;
-    Pila list;
-    
-	do{
+    	Pila list;
+    	do{
 		cout<<"\n(1) Insertar";
-        cout<<"\n(2) Eliminar";
-        cout<<"\n(3) Buscar ";
-        cout<<"\n(4) Imprimir";
+		cout<<"\n(2) Eliminar";
+		cout<<"\n(3) Buscar ";
+		cout<<"\n(4) Imprimir";
 		cout<<"\n(5) Salir";
 		cout<<"\nOpcion: ";
 		cin>>opc;
 		if(opc==1){
 			int n;
-            cout<<"Valor: ";cin>>n;
-            list.push(n);
-            
+			cout<<"Valor: ";cin>>n;
+			list.push(n);           
+		}		
+        	else if(opc==2){
+            		list.pop();
 		}
-		
-        else if(opc==2){
-            list.pop();
-        }
-
-        else if(opc==3){
-            list.buscar();
-        }
+		else if(opc==3){
+			list.buscar();
+        	}
 		else if(opc==4){
 			list.imprimir();
-			}				
-		}while(opc!=5);
+		}				
+	}while(opc!=5);
 		
 }
